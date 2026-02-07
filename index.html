@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>ALMA</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+
+    <body>
+        <h1>ALMA</h1>
+        <div id="buscador-container">
+            <select id="filtro">
+                <option value="titulo" selected>Título</option>
+                <option value="todos">Todos</option>
+            </select>
+            <input type="text" id="buscador" placeholder="Buscar canción...">
+        </div>
+
+        <button id="btn-menu">☰</button>
+        <div id="menu-lateral">
+            <a href="#alma" class="btn-indice">ALMA</a>
+            <a href="#vers" class="btn-indice">Versiones</a>
+        </div>
+
+        <h2 id="alma">Canciones</h2>
+        <ul class="lista">
+            <li><a href="canciones/alma/hilo_de_ariadna.html">El hilo de Ariadna</a></li>
+            <li><a href="canciones/alma/melon_de_agua.html">Melón de agua</a></li>
+            <li><a href="canciones/alma/vuela.html">Vuela</a></li>
+        </ul>
+
+        <h2 id="vers">Versiones</h2>
+        <ul class="lista">
+            <li><a href="canciones/versiones/V1.html">V1</a></li>
+        </ul>
+
+        <h2 style="display:none"></h2>
+        <script src="js/buscador.js"></script>
+
+        <script>
+            const btnMenu = document.getElementById("btn-menu");
+            const menu = document.getElementById("menu-lateral");
+
+            const btnTools = document.getElementById("btn-tools");
+            const tools = document.getElementById("tools-lateral");
+
+
+            btnMenu.addEventListener("click", () => {
+                menu.classList.toggle("abierto");
+                tools.classList.remove("abierto");
+            });
+
+            btnTools.addEventListener("click", () => {
+                tools.classList.toggle("abierto");
+                menu.classList.remove("abierto");
+            });
+        </script>
+    </body>
+
+</html>
