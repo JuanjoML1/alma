@@ -4,15 +4,26 @@
     <head>
         <meta charset="UTF-8">
         <title>Título</title>
+        <link rel="stylesheet" href="../../css/colores.css">
         <link rel="stylesheet" href="../../css/estilo.css">
+        <link rel="stylesheet" href="../../css/estilo-texto.css">
     </head>
 
     <body>
         <div class="cancion-header">
             <h1 class="titulo">Título</h1>
+            <div class="tono">
+                <span>A</span>
+            </div>
         </div>
         <div id="main-controls">
             <button id="back-button" onclick="window.location.href='../../index.html'">← Volver</button>
+            <div id="controls-container">
+                <button id="back-button" onclick="window.location.href='../../index.html'">JML</button>
+                <button id="back-button" onclick="window.location.href='../../index.html'">← Volver</button>
+                <button id="back-button" onclick="window.location.href='../../index.html'">← Volver</button>
+                <button id="back-button" onclick="window.location.href='../../index.html'">← Volver</button>
+            </div>
         </div>
         <pre>
 Texto de la canción
@@ -20,5 +31,9 @@ Texto de la canción
 Estribillo
 </span>
 </pre>
+
     </body>
+    <script src="../../js/transponer.js"></script>
+    <script src="../../js/cambiar_tema.js"></script>
+
 </html>

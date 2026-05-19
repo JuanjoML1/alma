@@ -4,73 +4,74 @@
     <head>
         <meta charset="UTF-8">
         <title>ALMA</title>
+        <link rel="stylesheet" href="css/colores.css">
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/estilo-texto.css">
     </head>
 
     <body>
-        <h1>ALMA</h1>
-        <div id="buscador-container">
-            <select id="filtro">
-                <option value="titulo" selected>Título</option>
-                <option value="todos">Todos</option>
-            </select>
-            <input type="text" id="buscador" placeholder="Buscar canción...">
+        <div id="barra-fija">
+            <h1>ALMA</h1>
+
+            <div id="buscador-container">
+                <select id="filtro">
+                    <option value="titulo" selected>Título</option>
+                    <option value="autor">Autor</option>
+                    <option value="album">Álbum</option>
+                    <option value="todos">Todos</option>
+                </select>
+                <input type="text" id="buscador" placeholder="Buscar canción...">
+            </div>
+
+            <label><input type="checkbox" id="showAlbum">Álbum</label>
+            <label><input type="checkbox" id="showAutor">Autor</label>
         </div>
 
         <button id="btn-menu">☰</button>
-        <div id="menu-lateral">
+        <div id="secciones-lateral">
             <a href="#alma" class="btn-indice">ALMA</a>
             <a href="#vers" class="btn-indice">Versiones</a>
         </div>
 
+        <button id="btn-theme">🌙</button>
+
         <h2 id="alma">Canciones</h2>
         <ul class="lista">
-            <li><a href="canciones/alma/hilo_de_ariadna.html">El hilo de Ariadna</a></li>
-            <li><a href="canciones/alma/melon_de_agua.html">Melón de agua</a></li>
-            <li><a href="canciones/alma/vuela.html">Vuela</a></li>
-            <li><a href="canciones/alma/hasta_siempre.html">Hasta siempre</a></li>
-            <li><a href="canciones/alma/siempre_por_ti.html">Siempre por ti</a></li>
-            <li><a href="canciones/alma/jimena.html">Jimena</a></li>
             <li><a href="canciones/alma/a_donde_lo_huido.html">A dónde lo huido</a></li>
-            <li><a href="canciones/alma/mi_refugio.html">Mi refugio</a></li>
-            <li><a href="canciones/alma/lagarto_lagarto.html">Lagarto, lagarto</a></li>
-            <li><a href="canciones/alma/tabernarios.html">Tabernarios</a></li>
+            <li><a href="canciones/alma/cantiga.html">Cantiga</a></li>
+            <li><a href="canciones/alma/castilla.html">Castilla</a></li>
             <li><a href="canciones/alma/edicto_xxi.html">Edicto XXI</a></li>
+            <li><a href="canciones/alma/hilo_de_ariadna.html">El hilo de Ariadna</a></li>
+            <li><a href="canciones/alma/hasta_siempre.html">Hasta siempre</a></li>
+            <li><a href="canciones/alma/jimena.html">Jimena</a></li>
+            <li><a href="canciones/alma/juan_y_maria.html">Juan y María</a></li>
+            <li><a href="canciones/alma/lagarto_lagarto.html">Lagarto, lagarto</a></li>
+            <li><a href="canciones/alma/melon_de_agua.html">Melón de agua</a></li>
+            <li><a href="canciones/alma/mi_refugio.html">Mi refugio</a></li>
+            <li><a href="canciones/alma/siempre_por_ti.html">Siempre por ti</a></li>
+            <li><a href="canciones/alma/sin_ti.html">Sin ti</a></li>
+            <li><a href="canciones/alma/tabernarios.html">Tabernarios</a></li>
+            <li><a href="canciones/alma/tragaluz.html">Tragaluz</a></li>
             <li><a href="canciones/alma/tu_navidad.html">Tu Navidad</a></li>
+            <li><a href="canciones/alma/vuela.html">Vuela</a></li>
         </ul>
 
         <h2 id="vers">Versiones</h2>
         <ul class="lista">
-            <li><a href="canciones/versiones/mr_tambourine_man.html">Mr. Tambourine man</a></li>
-            <li><a href="canciones/versiones/lady_madrid.html">Lady Madrid</a></li>
-            <li><a href="canciones/versiones/handle_with_care.html">Handle with care</a></li>
-            <li><a href="canciones/versiones/un_velero_llamado_libertad.html">Un velero llamado libertad</a></li>
             <li><a href="canciones/versiones/baila_morena.html">Baila, morena</a></li>
+            <li><a href="canciones/versiones/handle_with_care.html">Handle with care</a></li>
+            <li><a href="canciones/versiones/lady_madrid.html">Lady Madrid</a></li>
             <li><a href="canciones/versiones/marta_sebas_guille_y_los_demas.html">Marta, Sebas, Guille y los demás</a></li>
+            <li><a href="canciones/versiones/mr_tambourine_man.html">Mr. Tambourine man</a></li>
             <li><a href="canciones/versiones/retales_de_una_vida.html">Retales de una vida</a></li>
+            <li><a href="canciones/versiones/un_velero_llamado_libertad.html">Un velero llamado libertad</a></li>
         </ul>
 
         <h2 style="display:none"></h2>
+
         <script src="js/buscador.js"></script>
-
-        <script>
-            const btnMenu = document.getElementById("btn-menu");
-            const menu = document.getElementById("menu-lateral");
-
-            const btnTools = document.getElementById("btn-tools");
-            const tools = document.getElementById("tools-lateral");
-
-
-            btnMenu.addEventListener("click", () => {
-                menu.classList.toggle("abierto");
-                tools.classList.remove("abierto");
-            });
-
-            btnTools.addEventListener("click", () => {
-                tools.classList.toggle("abierto");
-                menu.classList.remove("abierto");
-            });
-        </script>
+        <script src="js/barra_lateral.js"></script>
+        <script src="js/cambiar_tema.js"></script>
+        <script src="js/mostrar.js"></script>
     </body>
-
 </html>

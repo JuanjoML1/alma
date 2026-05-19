@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.lista {
+    list-style: none;
+    /* elimina los bullets */
+    padding: 0;
+    /* quita padding por defecto del <ul> */
+    margin: 0;
+    /* quita margen por defecto del <ul> */
+}
+
+.lista a {
+    display: block;
+    /* Hace que cada enlace ocupe toda la línea, clic fácil en móvil */
+    text-align: center;
+    /* Centra el texto */
+    padding: 0.2em 1em;
+    /* Espacio interno: 0.2em arriba/abajo, 1em izquierda/derecha */
+    margin: 0.2em 0;
+    /* Separación entre enlaces: 0.2em arriba y abajo */
+    background-color: var(--bg-listas);
+    /* Color de fondo gris claro */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    color: var(--texto);
+    /* Color del texto gris oscuro */
+    border-radius: 4px;
+    /* Esquinas ligeramente redondeadas */
+    transition: background 0.2s;
+    /* Transición suave de 0.2s al cambiar el fondo (hover) */
+}
+
+.lista a:hover {
+    background-color: var(--hover-lista);
+    /* Cambia el fondo al pasar el cursor */
+}
+
+pre {
+    font-size: 1.6em;
+    /* un poquito más grande que el tamaño base */
+    line-height: 1.2;
+    /* interlineado*/
+}
+
+pre .estribillo {
+    font-weight: bold;
+    color: var(--estribillo);
+}
+
+pre .puente {
+    font-weight: bold;
+    color: var(--puente);
+}
+
+pre .solo {
+    font-weight: bold;
+    color: var(--solo);
+}
+
+pre .gr {
+    color: var(--acorde-gr);
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+pre .ag {
+    color: var(--acorde-ag);
+    text-decoration: overline;
+}
+
+pre.original {
+    /*Los pre que son original. Con punto es "los original que estén dentro de un pre"*/
+    font-style: italic;
+    color: var(--texto);
+}
+
+.cancion-header .numeros {
+    min-width: 80px;
+    font-size: 1em;
+    text-align: left;
+}
+
+.cancion-header .titulo {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.cancion-header .tono {
+    flex: 1 0 100%;
+    min-width: 80px;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 4px;
+}

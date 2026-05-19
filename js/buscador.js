@@ -5,9 +5,12 @@ const items = document.querySelectorAll("li");
 // Función para normalizar texto (quita tildes)
 function normalizar(texto) {
     return texto
-        .toLowerCase()
-        .normalize("NFD")          // separa letras de los acentos
-        .replace(/[\u0300-\u036f]/g, ""); // elimina los acentos
+        .toLowerCase()                        // todo en minúsculas
+        .normalize("NFD")                     // separa letras y acentos
+        .replace(/[\u0300-\u036f]/g, "")      // elimina los acentos
+        .replace(/[^\w\s]/g, "")              // elimina toda la puntuación
+        //.replace(/\s+/g, "")                  // elimina todos los espacios
+        .trim();                              // elimina espacios al inicio y final
 }
 
 function filtrar() {
@@ -17,10 +20,7 @@ function filtrar() {
     items.forEach(li => {
         const titulo = normalizar(li.querySelector("a").textContent);
         const autor = normalizar(li.dataset.author || "");
-        const momentos = (li.dataset.momento || "").toLowerCase().split(",").map(normalizar);
-        const bib = normalizar(li.dataset.bib || "");
-        const nold = li.dataset.nold || "";
-        const nnew = normalizar(li.dataset.nnew || "");
+        const album = (li.dataset.album || "").toLowerCase().split(",").map(normalizar);
 
         let mostrar = false;
 
@@ -28,21 +28,14 @@ function filtrar() {
             mostrar = titulo.includes(texto);
         } else if (tipo === "autor") {
             mostrar = autor.includes(texto);
-        } else if (tipo === "momento") {
-            mostrar = momentos.some(m => m.includes(texto));
+        } else if (tipo === "album") {
+            mostrar = album.some(m => m.includes(texto));
         } else if (tipo === "bib") {
             mostrar = bib.includes(texto);
-        } else if (tipo === "nold") {
-            mostrar = nold.includes(texto);
-        } else if (tipo === "nnew") {
-            mostrar = nnew.includes(texto);
         } else if (tipo === "todos") {
             mostrar = titulo.includes(texto) ||
                 autor.includes(texto) ||
-                momentos.some(m => m.includes(texto)) ||
-                bib.includes(texto) ||
-                nold.includes(texto) ||
-                nnew.includes(texto);
+                album.some(m => m.includes(texto))
         }
 
         li.style.display = mostrar ? "" : "none";
