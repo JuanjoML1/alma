@@ -54,7 +54,27 @@
 .ritmo {
     border: 4px solid;
     border-radius: 6px;
-    width: 50%;
+    width: 100%;
+}
+
+.ritmos-cortos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ritmos-largos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .bat-1,
