@@ -59,22 +59,22 @@
 
 .ritmos-cortos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     align-items: center;
     justify-items: center;
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 10px auto;
 }
 
 .ritmos-largos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 10px;
     align-items: center;
     justify-items: center;
-    width: 80%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 10px auto;
 }
 
 .bat-1,
@@ -87,5 +87,5 @@
 .bat-8,
 .bat-9,
 .bat-10 {
-    font-weight: bold;
+    font-weight: normal;
 }
