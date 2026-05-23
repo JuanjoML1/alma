@@ -23,6 +23,27 @@
                 <button id="back-button" onclick="window.location.href='../alma/tabernarios.html'">Volver</button>
             </div>
         </div>
+        <div class="control-zoom">
+            <label>Zoom:
+                <input
+                    type="range"
+                    id="zoom-slider"
+                    min="0.5"
+                    max="1.5"
+                    step="0.05"
+                    value="1">
+                <input
+                    type="number"
+                    id="zoom-number"
+                    min="0.5"
+                    max="1.5"
+                    step="0.05"
+                    value="1">
+            </label>
+        </div>
+        <div class="ritmos-cortos">
+            <img class="ritmo bat-1" src="../bat/vuela_toms.svg">
+        </div>
         <pre>
 (Miguel)
 Amanece que no es poco en esta gran ciudad
@@ -77,5 +98,6 @@ si somos tabernarios y a quién le va a importar.
     </body>
     <script src="../../js/transponer.js"></script>
     <script src="../../js/cambiar_tema.js"></script>
+    <script src="../../js/zoom.js"></script>
 
 </html>

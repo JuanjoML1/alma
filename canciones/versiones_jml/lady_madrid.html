@@ -23,6 +23,24 @@
                 <button id="back-button" onclick="window.location.href='../versiones/lady_madrid.html'">Volver</button>
             </div>
         </div>
+        <div class="control-zoom">
+            <label>Zoom:
+                <input
+                    type="range"
+                    id="zoom-slider"
+                    min="0.5"
+                    max="1.5"
+                    step="0.05"
+                    value="1">
+                <input
+                    type="number"
+                    id="zoom-number"
+                    min="0.5"
+                    max="1.5"
+                    step="0.05"
+                    value="1">
+            </label>
+        </div>
         <div class="ritmos-cortos">
             <img class="ritmo bat-1" src="../bat/ladymadrid_intro.svg">
             <img class="ritmo bat-4" src="../bat/ladymadrid_r1.svg">
@@ -36,8 +54,27 @@
             <img class="ritmo bat-7" src="../bat/ladymadrid_r2.svg">
             <img class="ritmo bat-3" src="../bat/ladymadrid_r2+t.svg">
         </div>
-
         <pre>
+Intro: <span class="bat-1">(Intro: 2)</span>
+
+Estrofa: <span class="bat-1">(Intro: 8)</span>
+
+Estribillo: <span class="bat-1">(Intro: 6)</span><span class="bat-2">(R1(nok): 1)</span>
+
+Estrofa: <span class="bat-4">(R1: 8 + 8)</span><span class="bat-5">(Br1: 1)</span>
+
+Estribillo: <span class="bat-6">(R1-ride: 7)</span><span class="bat-5">(Br1: 1)</span>
+            <span class="bat-6">(R1-ride: 6)</span><span class="bat-7">(R2: 1)</span>
+
+Solo: <span class="bat-7">(R2: 2)</span><span class="bat-3">(R2+t: 1)</span>
+
+Estribillo: <span class="bat-6">(R1-ride: 7)</span><span class="bat-8">(Br2: 1)</span>
+            <span class="bat-6">(R1-ride: 6)</span><span class="bat-9">(R1-ride-t: 1)</span>
+
+Final: <span class="bat-6">(R1-ride: 4)</span><span class="bat-9">(Br2: 1)</span>
+
+<hr>
+
 <span class="bat-1">
 (Intro: 2)
 Intro: Do Fa Do Sol
@@ -78,17 +115,18 @@ La estrella de los tejados, lo mas rock&roll de por aquí
 los gatos andábamos colgados, Lady Madrid.<span class="bat-8">(Br2: 1)</span>
 (R1-ride: 6)
 Pitillos ajustados, era The Burning, Ronaldos y Lou Reed,
-                                       <span class="bat-9">(Br2: 1)</span>
+                                       <span class="bat-9">(R1-ride-t: 1)</span>
 y nunca hablaron los diarios de Lady Ma</span><span class="bat-9">drid.</span>
 
 <span class="bat-6">(R1-ride: 4)
 Lady Madrid, Lady Madrid.
 </span>
-<span class="bat-9">(Br2: 1)</span>
+<span class="bat-9">(R1-ride-t: 1)</span>
 </pre>
 
     </body>
     <script src="../../js/transponer.js"></script>
     <script src="../../js/cambiar_tema.js"></script>
+    <script src="../../js/zoom.js"></script>
 
 </html>

@@ -23,29 +23,71 @@
                 <button id="back-button" onclick="window.location.href='../alma/melon_de_agua.html'">Volver</button>
             </div>
         </div>
+        <div class="control-zoom">
+            <label>Zoom:
+                <input
+                    type="range"
+                    id="zoom-slider"
+                    min="0.5"
+                    max="1.5"
+                    step="0.05"
+                    value="1">
+                <input
+                    type="number"
+                    id="zoom-number"
+                    min="0.5"
+                    max="1.5"
+                    step="0.05"
+                    value="1">
+            </label>
+        </div>
+        <div class="ritmos-cortos">
+            <img class="ritmo bat-1" src="../bat/melon_r1.svg">
+            <img class="ritmo bat-2" src="../bat/melon_r2.svg">
+            <img class="ritmo bat-3" src="../bat/melon_r2r.svg">
+            <img class="ritmo bat-4" src="../bat/castilla_k.svg">
+        </div>
         <pre>
-(La7-Sol7 -- Re-Do-Sol) La7-Sol7
+Estrofa: <span class="bat-1">(R1: 8)</span>
+Estrofa: <span class="bat-2">(R2: 8)</span>
+
+Estribillo: <span class="bat-3">(R2-r: 8)</span>
+
+Estrofa: <span class="bat-1">(R1: 8)</span>
+Puente: <span class="bat-4">(K: 8+8)</span>
+
+Estribillo: <span class="bat-3">(R2-r: 8)</span>
+
+Estrofa: <span class="bat-2">(R2: 8)</span>
+
+Final: <span class="bat-3">(R2-r: 8)</span>
+
+<hr><span class="bat-1">
+(R1: 8)
 A dónde vas, melón de agua.
 Buscas refugio en la manada.
 Que nadie vea tu intención
-de propinar esa patada.
-
+de propinar esa patada.</span>
+<span class="bat-2">
+(R2: 8)
 Melón de agua, melón de hiel,
 melón de barro, melón de piel.
 Piel de amarguras, de calabazas,
-de más mentiras y amenazas.
-<span class="estribillo">
----Re-Do-Sol ---
+de más mentiras y amenazas.</span>
+<span class="bat-3">
+(R2-r: 8)
 Ven a bregar, ven a bregar,
 ven a bregar, melón de agua.
 No esperes siempre en la parada
-por una línea que no vendrá.
-</span>
+por una línea que no vendrá.</span>
+<span class="bat-1">
+(R1: 8)
 Con falsa solidaridad,
 con tanto odio y mezquindad.
 Una memoria de intolerancia,
-falsa lucha por la igualdad.
-
+falsa lucha por la igualdad.</span>
+<span class="bat-4">
+(K: 8+8)
 Dónde vas, dime dónde vas,
 sin Radio Futura por la puerta de atrás.
 Una insegura realidad
@@ -54,26 +96,30 @@ que nos atraviesa sin avisar.
 Había una vez un barquito chiquitito
 que no podía navegar.
 Pasaron un, dos, tres y varias semanas
-y en la manada naufragó.
-<span class="estribillo">
----Re-Do-Sol --- 
+y en la manada naufragó.</span>
+<span class="bat-3">
+(R2-r: 8)
 Ven a bregar, ven a bregar,
 ven a bregar, melón de agua.
 No esperes siempre en la parada
-por una línea que no vendrá.
-</span>
-La7-Sol7 (2´35”) 
+por una línea que no vendrá.</span>
+<span class="bat-2">
+(R2: 8)
 Una injusticia camuflada
 de mayoría inquisitorial.
 No hay calor ni hay empatía,
-ni saben nada de humanidad.
-
+ni saben nada de humanidad.</span>
+<span class="bat-3">
+(R2-r: 8)
 Tan sólo quiero habitar
-en alguien que me sepa amar (bis).
+en alguien que me sepa amar.
+Tan sólo quiero habitar
+en alguien que me sepa amar.</span>
 </pre>
 
     </body>
     <script src="../../js/transponer.js"></script>
     <script src="../../js/cambiar_tema.js"></script>
+    <script src="../../js/zoom.js"></script>
 
 </html>
