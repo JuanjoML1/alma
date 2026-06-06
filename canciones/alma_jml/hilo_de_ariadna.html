@@ -28,51 +28,65 @@
                 <input
                     type="range"
                     id="zoom-slider"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
                 <input
                     type="number"
                     id="zoom-number"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
             </label>
         </div>
-        <div class="ritmos-cortos">
-            <img class="ritmo bat-1" src="../bat/hilo_r1.svg">
-            <img class="ritmo bat-2" src="../bat/hilo_r2.svg">
-            <img class="ritmo bat-3" src="../bat/hilo_e1.svg">
-            <img class="ritmo bat-4" src="../bat/hilo_e1b.svg">
-            <img class="ritmo bat-7" src="../bat/castilla_k.svg">
-        </div>
-        <div class="ritmos-largos">
-            <img class="ritmo bat-5" src="../bat/hilo_r3-1.svg">
-            <img class="ritmo bat-6" src="../bat/hilo_r3-2.svg">
+        <div class="ritmos ritmos--cortos">
+            <div class="ritmo-item bat-1">
+                <span class="nombre-ritmo">R1</span><img class="ritmo-img" src="../bat/hilo_r1.svg">
+            </div>
+            <div class="ritmo-item bat-2">
+                <span class="nombre-ritmo">R2</span><img class="ritmo-img" src="../bat/hilo_r2.svg">
+            </div>
+            <div class="ritmo-item bat-3">
+                <span class="nombre-ritmo">E1</span><img class="ritmo-img" src="../bat/hilo_e1.svg">
+            </div>
+            <div class="ritmo-item bat-4">
+                <span class="nombre-ritmo">Br1</span><img class="ritmo-img" src="../bat/hilo_br1.svg">
+            </div>
+            <div class="ritmo-item bat-7">
+                <span class="nombre-ritmo">K</span><img class="ritmo-img" src="../bat/castilla_k.svg">
+            </div>
+            <div class="ritmo-item bat-5">
+                <span class="nombre-ritmo">R2-O</span><img class="ritmo-img" src="../bat/hilo_r2-o.svg">
+            </div>
+            <div class="ritmo-item bat-6">
+                <span class="nombre-ritmo">+T</span><img class="ritmo-img" src="../bat/hastasiempre_t.svg">
+            </div>
+            <div class="ritmo-item bat-8">
+                <span class="nombre-ritmo">+2T</span><img class="ritmo-img" src="../bat/hastasiempre_t2.svg">
+            </div>
         </div>
         <pre>
-Intro: <span class="bat-1">(R1: 8)</span>
+     Intro: <span class="bat-1">(R1: 8)</span>
 
-Estrofa: <span class="bat-2">(R2: 8+8 + 8+8)</span>
-Puente: <span class="bat-3">(E1: 7)</span><span class="bat-4">(E1-b: 1)</span>
+   Estrofa: <span class="bat-2">(R2: 8+8 + 8+8)</span>    |  (x2)
+    Puente: <span class="bat-3">(E1: 7)</span><span class="bat-4">(Br1: 1)</span>    |
 
-Estrofa: <span class="bat-2">(R2: 8+8 + 8+8)</span>
-Puente: <span class="bat-3">(E1: 7)</span><span class="bat-4">(E1-b: 1)</span>
+Estribillo: <span class="bat-5">(R2-O: 3)</span><span class="bat-6">(+T: 1)</span>(x3)
+            <span class="bat-5">(R2-O: 3)</span><span class="bat-8">(+2T: 1)</span>
 
-Estribillo: <span class="bat-5">(R3-1: 8 + 7)</span><span class="bat-6">(R3-2: 1)</span>
-Puente: <span class="bat-3">(E1: 7)</span><span class="bat-4">(E1-b: 1)</span>
+    Puente: <span class="bat-3">(E1: 7)</span><span class="bat-4">(Br1: 1)</span>
 <span class="solo">
 Solo
 </span>
-Puente: <span class="bat-7">(K: 7)</span><span class="bat-4">(E1-b: 1)</span>
+    Puente: <span class="bat-7">(K: 7)</span><span class="bat-4">(Br1: 1)</span>
 <span class="solo">
 Solo
 Re -> Mim -> Fa#m -> Re -> La (Bis)
 </span>
-Puente: <span class="bat-3">(E1: 7)</span><span class="bat-4">(E1-b: 1)</span>
-Final: <span class="bat-5">(R3-1: 4)</span>(xn)
+    Puente: <span class="bat-3">(E1: 7)</span><span class="bat-4">(Br1: 1)</span>
+     Final: <span class="bat-5">(R2-O: 4)</span>(xn)
 
 <hr>
 
@@ -93,7 +107,7 @@ Sabrás de lo que soy capaz.
 </span><span class="bat-3">
 (E1: 7)
 Casi nadie la conoce, Teseo la olvidó.
-                                    <span class="bat-4">(E1-b: 1)</span>
+                                    <span class="bat-4">(Br1: 1)</span>
 Es la verdadera musa, la Diosa del A<span class="bat-4">mor.</span>
 </span>
 <span class="bat-2">(R2: 8+8)
@@ -110,27 +124,28 @@ Sabrás de lo que soy capaz.
 </span><span class="bat-3">
 (E1: 7)
 Casi nadie la conoce, Teseo la olvidó.
-                                    <span class="bat-4">(E1-b: 1)</span>
+                                    <span class="bat-4">(Br1: 1)</span>
 Es la verdadera musa, la Diosa del A<span class="bat-4">mor.</span>
 </span><span class="bat-5">
-(R3-1: 8)
-La noche de Ariadna no se suicidó. 
-Murió por Teseo, Diana la mató. 
-(R3-1: 7)
-Es el Hilo de Ariadna, él la traiciono.
-                                   <span class="bat-6">(R3-2: 1)</span>
-Tan sólo la entiende la Diosa del A<span class="bat-6">mor.</span>
+(R2-O: 3)                      <span class="bat-6">(+T: 1)</span>
+La noche de Ariadna no se suici<span class="bat-6">dó.</span>
+(R2-O: 3)                   <span class="bat-6">(+T: 1)</span>
+Murió por Teseo, Diana la ma<span class="bat-6">tó.</span>
+(R2-O: 3)                           <span class="bat-6">(+T: 1)</span>
+Es el Hilo de Ariadna, él la traicio<span class="bat-6">nó.</span>
+(R2-O: 3)                          <span class="bat-8">(+2T: 1)</span>
+Tan sólo la entiende la Diosa del A<span class="bat-8">mor.</span>
 </span><span class="bat-7">
 (K: 7)
 Nadie supo qué fue de ella, si se suicidó.
-                                    <span class="bat-4">(E1-b: 1)</span>
+                                    <span class="bat-4">(Br1: 1)</span>
 Es la verdadera musa, la Diosa del A<span class="bat-4">mor.</span>
 </span><span class="solo">
 Solo
 </span><span class="bat-3">
 (E1: 7)
 Nadie supo qué fue de ella, si se suicidó.
-                                    <span class="bat-4">(E1-b: 1)</span>
+                                    <span class="bat-4">(Br1: 1)</span>
 Es la verdadera musa, la Diosa del A<span class="bat-4">mor.</span>
 </span><span class="solo">
 Solo
@@ -138,12 +153,11 @@ Re -> Mim -> Fa#m -> Re -> La (Bis)
 </span><span class="bat-3">
 (E1: 7)
 Casi nadie la conoce, Teseo la olvidó.
-                                    <span class="bat-4">(E1-b: 1)</span>
+                                    <span class="bat-4">(Br1: 1)</span>
 Es la verdadera musa, la Diosa del A<span class="bat-4">mor.</span>
 </span><span class="bat-5">
-(R3-1: 4)
-Es Hilo de Ariadna, es el Hilo de Ariadna. (xn)
-</span>
+(R2-O: 4)
+Es Hilo de Ariadna, es el Hilo de Ariadna.</span> (xn)
 </pre>
 
     </body>

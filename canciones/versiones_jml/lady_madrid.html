@@ -28,50 +28,74 @@
                 <input
                     type="range"
                     id="zoom-slider"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
                 <input
                     type="number"
                     id="zoom-number"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
             </label>
         </div>
-        <div class="ritmos-cortos">
-            <img class="ritmo bat-1" src="../bat/ladymadrid_intro.svg">
-            <img class="ritmo bat-4" src="../bat/ladymadrid_r1.svg">
-            <img class="ritmo bat-6" src="../bat/ladymadrid_r1-ride.svg">
-            <img class="ritmo bat-9" src="../bat/ladymadrid_r1-ride-t.svg">
-            <img class="ritmo bat-5" src="../bat/ladymadrid_br1.svg">
-            <img class="ritmo bat-8" src="../bat/ladymadrid_br2.svg">
+        <div class="ritmos ritmos--cortos">
+            <div class="ritmo-item bat-1">
+                <span class="nombre-ritmo">Intro</span><img class="ritmo-img" src="../bat/ladymadrid_intro.svg">
+            </div>
+            <div class="ritmo-item bat-4">
+                <span class="nombre-ritmo">R1</span><img class="ritmo-img" src="../bat/ladymadrid_r1.svg">
+            </div>
+            <div class="ritmo-item bat-6">
+                <span class="nombre-ritmo">R1-r</span><img class="ritmo-img" src="../bat/ladymadrid_r1-ride.svg">
+            </div>
+            <div class="ritmo-item bat-9">
+                <span class="nombre-ritmo">+3S</span><img class="ritmo-img" src="../bat/ladymadrid_r1-ride-t.svg">
+            </div>
+            <div class="ritmo-item bat-5">
+                <span class="nombre-ritmo">Br1</span><img class="ritmo-img" src="../bat/ladymadrid_br1.svg">
+            </div>
+            <div class="ritmo-item bat-8">
+                <span class="nombre-ritmo">Br1</span><img class="ritmo-img" src="../bat/ladymadrid_br2.svg">
+            </div>
+            <div class="ritmo-item bat-2">
+                <span class="nombre-ritmo">R2</span> <img class="ritmo-img" src="../bat/ladymadrid_r1nok.svg">
+            </div>
+            <div class="ritmo-item bat-6">
+                <span class="nombre-ritmo">+3T</span><img class="ritmo-img" src="../bat/ladymadrid_3t.svg">
+            </div>
         </div>
-        <div class="ritmos-largos">
-            <img class="ritmo bat-2" src="../bat/ladymadrid_r1nok.svg">
-            <img class="ritmo bat-7" src="../bat/ladymadrid_r2.svg">
-            <img class="ritmo bat-3" src="../bat/ladymadrid_r2+t.svg">
+        <div class="ritmos ritmos--largos">
+            <div class="ritmo-item bat-7">
+                <span class="nombre-ritmo">R3</span><img class="ritmo-img" src="../bat/ladymadrid_r2.svg">
+            </div>
+            <div class="ritmo-item bat-3">
+                <span class="nombre-ritmo">R3+T</span><img class="ritmo-img" src="../bat/ladymadrid_r2+t.svg">
+            </div>
         </div>
+        <ul class="lista">
+            <li><a href="../../canciones/versiones_jml/handle_with_care.html">Handle with care</a></li>
+        </ul>
         <pre>
-Intro: <span class="bat-1">(Intro: 2)</span>
+     Intro: <span class="bat-1">(Intro: 2)</span>
 
-Estrofa: <span class="bat-1">(Intro: 8)</span>
+   Estrofa: <span class="bat-1">(Intro: 8)</span>
 
-Estribillo: <span class="bat-1">(Intro: 6)</span><span class="bat-2">(R1(nok): 1)</span>
+Estribillo: <span class="bat-1">(Intro: 6)</span><span class="bat-2">(R2: 1)</span><span class="bat-6">(+3T: 1)</span>
 
-Estrofa: <span class="bat-4">(R1: 8 + 8)</span><span class="bat-5">(Br1: 1)</span>
+   Estrofa: <span class="bat-4">(R1: 8 + 8)</span><span class="bat-5">(Br1: 1)</span>
 
 Estribillo: <span class="bat-6">(R1-ride: 7)</span><span class="bat-5">(Br1: 1)</span>
             <span class="bat-6">(R1-ride: 6)</span><span class="bat-7">(R2: 1)</span>
 
-Solo: <span class="bat-7">(R2: 2)</span><span class="bat-3">(R2+t: 1)</span>
+      Solo: <span class="bat-7">(R2: 2)</span><span class="bat-3">(R2+t: 1)</span>
 
 Estribillo: <span class="bat-6">(R1-ride: 7)</span><span class="bat-8">(Br2: 1)</span>
             <span class="bat-6">(R1-ride: 6)</span><span class="bat-9">(R1-ride-t: 1)</span>
 
-Final: <span class="bat-6">(R1-ride: 4)</span><span class="bat-9">(Br2: 1)</span>
+     Final: <span class="bat-6">(R1-ride: 4)</span><span class="bat-9">(Br2: 1)</span>
 
 <hr>
 
@@ -87,7 +111,7 @@ de Málaga hasta La Coruña, durmiendo en la estación de tren.
 
 (Intro: 6)
 La estrella de los tejados, lo mas rock & roll de por aquí,
-                                     <span class="bat-2">(R1(nok): 1)</span>
+                                     <span class="bat-2">(R2: 1)</span><span class="bat-6">(+3T: 1)</span>
 los gatos andábamos colgados, Lady Ma</span><span class="bat-2">drid.
 </span>
 <span class="bat-4">(R1: 8)

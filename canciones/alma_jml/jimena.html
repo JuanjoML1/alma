@@ -14,7 +14,7 @@
         <div class="cancion-header">
             <h1 class="titulo">Jimena</h1>
             <div class="tono">
-                <span>102 bpm</span>
+                <span>110 bpm</span>
             </div>
         </div>
         <div id="main-controls">
@@ -28,45 +28,67 @@
                 <input
                     type="range"
                     id="zoom-slider"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
                 <input
                     type="number"
                     id="zoom-number"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
             </label>
         </div>
-        <div class="ritmos-cortos">
-            <img class="ritmo bat-1" src="../bat/ladymadrid_intro.svg">
-            <img class="ritmo bat-2" src="../bat/jimena_charles.svg">
-            <img class="ritmo bat-3" src="../bat/jimena_toms.svg">
-            <img class="ritmo bat-4" src="../bat/jimena_toms2.svg">
-            <img class="ritmo bat-5" src="../bat/jimena_r1.svg">
-            <img class="ritmo bat-6" src="../bat/hastasiempre_e1.svg">
-            <img class="ritmo bat-7" src="../bat/jimena_r1r.svg">
+        <div class="ritmos ritmos--cortos">
+            <div class="ritmo-item bat-1">
+                <span class="nombre-ritmo">Intro</span><img class="ritmo-img" src="../bat/ladymadrid_intro.svg">
+            </div>
+            <div class="ritmo-item bat-2">
+                <span class="nombre-ritmo">Ch</span><img class="ritmo-img" src="../bat/jimena_charles.svg">
+            </div>
+            <div class="ritmo-item bat-3">
+                <span class="nombre-ritmo">HT</span><img class="ritmo-img" src="../bat/jimena_toms.svg">
+            </div>
+            <div class="ritmo-item bat-4">
+                <span class="nombre-ritmo">FT</span><img class="ritmo-img" src="../bat/jimena_toms2.svg">
+            </div>
+            <div class="ritmo-item bat-6">
+                <span class="nombre-ritmo">E1</span><img class="ritmo-img" src="../bat/hastasiempre_e1.svg">
+            </div>
+            <div class="ritmo-item bat-8">
+                <span class="nombre-ritmo">R2</span><img class="ritmo-img" src="../bat/hastasiempre_r1.svg">
+            </div>
+            <div class="ritmo-item bat-9">
+                <span class="nombre-ritmo">+3T</span><img class="ritmo-img" src="../bat/jimena_3t.svg">
+            </div>
+        </div>
+        <div class="ritmos ritmos--largos">
+            <div class="ritmo-item bat-5">
+                <span class="nombre-ritmo">R1</span><img class="ritmo-img" src="../bat/jimena_r.svg">
+            </div>
+            <div class="ritmo-item bat-7">
+                <span class="nombre-ritmo">R1-r</span><img class="ritmo-img" src="../bat/jimena_r-r.svg">
+            </div>
         </div>
         <pre>
-Intro: <span class="bat-1">(Intro: 4+8)</span>
-Estrofa: <span class="bat-1">(Intro: 8+8)</span>
-Estribillo: <span class="bat-2">(Charles: 7)</span><span class="bat-4">(Toms2: 1)</span>
+     Intro: <span class="bat-1">(Intro: 4+8)</span>
+   Estrofa: <span class="bat-1">(Intro: 8+8)</span>
+Estribillo: <span class="bat-2">(Ch: 7)</span><span class="bat-4">(FT: 1)</span>
 
-Estrofa: <span class="bat-5">(R1: 8)</span>
+   Estrofa: <span class="bat-5">(R1: 4)</span>
 Estribillo: <span class="bat-6">(E1: 8)</span>
 
-Estrofa: <span class="bat-5">(R1: 8)</span>
+   Estrofa: <span class="bat-5">(R1: 4)</span>
 Estribillo: <span class="bat-6">(E1: 8)</span>
 
-Solo: <span class="solo">(: )</span>
+      Solo: <span class="bat-8">(R2: 4 + 3)</span><span class="bat-9">(+3T: 1)</span>
 
-Estrofa: <span class="bat-7">(R1-r: 8+8)</span>
-Estribillo: <span class="bat-10">(Platos: 8)</span>
+   Estrofa: <span class="bat-7">(R1-r: 4 + 4)</span>
+Estribillo: <span class="bat-10">(Platos: 7)</span><span class="bat-4">(FT: 1)</span>
 
-Final: <span class="bat-7">(R1-r: 8)</span>
+     Final: <span class="bat-7">(R1-r: 4)</span>
 
 <hr>
 <span class="bat-1">(Intro: 4+8)
@@ -83,14 +105,14 @@ que no paran de repetir:
 la falsa y necia consigna
 de que todos luchan por mí.</span>
 <span class="bat-2">
-(Charles: 7)
+(Ch: 7)
 Pero la letra no espera
 y Jimena ha de comer,
 con sus ojitos de perla
-                      <span class="bat-4">(Toms2: 1)</span>
+                      <span class="bat-4">(FT: 1)</span>
 que nadie pueda oscure</span><span class="bat-4">cer.</span>
 <span class="bat-5">
-(R1: 8)
+(R1: 4)
 Robaron vida y mil riquezas
 como un imperio colonial.
 Ahora el miedo y mil complejos
@@ -102,7 +124,7 @@ aceptando todo igual.
 Empiezo a estar indignada,
 será que aún tengo dignidad.</span>
 <span class="bat-5">
-(R1: 8)
+(R1: 4)
 Aún me siento castellana,
 aunque rompieran su unidad,
 Historia y noble cultura
@@ -113,11 +135,11 @@ Te robarán tu futuro
 negando voz e identidad.
 ¿Por qué se niega lo justo
 y premian la desigualdad?</span>
-<span class="solo">
-(: )
-Solo</span>
+
+<span class="bat-8">(R2: 4 + 3)</span><span class="bat-9">(+3T: 1)</span>
+<span class="solo">Solo</span>
 <span class="bat-7">
-(R1-r: 8+8)
+(R1-r: 4 + 4)
 Y esa olvidada Castilla
 de la que tuve que partir
 por un futuro incierto,
@@ -128,13 +150,14 @@ tal vez por justa dignidad,
 en la que un pueblo castellano
 ensalce al fin su identidad.
 <span class="bat-10">
-(Platos: 8)
+(Platos: 7)
 Y los ojos de Jimena
 verán un sol hasta el mar
 sobre la eterna Castilla
-de justicia y libertad.</span>
+                   <span class="bat-4">(FT: 1)</span>
+de justicia y liber<span class="bat-4">tad.</span></span>
 <span class="bat-7">
-(R1-r: 8)
+(R1-r: 4)
 Final</span>
 </pre>
 

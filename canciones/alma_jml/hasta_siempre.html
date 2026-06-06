@@ -28,63 +28,87 @@
                 <input
                     type="range"
                     id="zoom-slider"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
                 <input
                     type="number"
                     id="zoom-number"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
             </label>
         </div>
-        <div class="ritmos-cortos">
-            <img class="ritmo bat-1" src="../bat/hastasiempre_r1.svg">
-            <img class="ritmo bat-3" src="../bat/hastasiempre_e1.svg">
-            <img class="ritmo bat-2" src="../bat/hastasiempre_r1t.svg">
-            <img class="ritmo bat-4" src="../bat/hastasiempre_e1t.svg">
-            <img class="ritmo bat-5" src="../bat/hastasiempre_e1t2.svg">
+        <div class="ritmos ritmos--cortos">
+            <div class="ritmo-item bat-1">
+                <span class="nombre-ritmo">R1</span><img class="ritmo-img" src="../bat/hastasiempre_r1.svg">
+            </div>
+            <div class="ritmo-item bat-3">
+                <span class="nombre-ritmo">E1</span><img class="ritmo-img" src="../bat/hastasiempre_e1.svg">
+            </div>
+            <div class="ritmo-item bat-9">
+                <span class="nombre-ritmo">+T(3)</span><img class="ritmo-img" src="../bat/hastasiempre_t3.svg">
+            </div>
+            <div class="ritmo-item bat-2">
+                <span class="nombre-ritmo">+T(4)</span><img class="ritmo-img" src="../bat/hastasiempre_t.svg">
+            </div>
+            <div class="ritmo-item bat-8">
+                <span class="nombre-ritmo">+2T</span><img class="ritmo-img" src="../bat/hastasiempre_t2.svg">
+            </div>
+            <div class="ritmo-item bat-4">
+                <span class="nombre-ritmo">E1-t</span><img class="ritmo-img" src="../bat/hastasiempre_e1t.svg">
+            </div>
+            <div class="ritmo-item bat-5">
+                <span class="nombre-ritmo">E1-t2</span><img class="ritmo-img" src="../bat/hastasiempre_e1t2.svg">
+            </div>
+
         </div>
-        <div class="ritmos-largos">
-            <img class="ritmo bat-6" src="../bat/hastasiempre_br1.svg">
-            <img class="ritmo bat-7" src="../bat/hastasiempre_br2.svg">
+        <div class="ritmos ritmos--largos">
+            <div class="ritmo-item bat-6">
+                <span class="nombre-ritmo">Br1</span><img class="ritmo-img" src="../bat/hastasiempre_br1.svg">
+            </div>
+            <div class="ritmo-item bat-7">
+                <span class="nombre-ritmo">Br2</span><img class="ritmo-img" src="../bat/hastasiempre_br2.svg">
+            </div>
         </div>
 
         <pre>
-2x:
-Intro: <span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
-Estrofa 1: <span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
-Estrofa 2: <span class="bat-3">(E1: 3)</span><span class="bat-4">(E1-t: 1)</span>(x2)
-           <span class="bat-3">(E1: 1)</span><span class="bat-5">(E1-t2: 1)</span>
+     Intro: <span class="bat-1">(R1: 3)</span><span class="bat-8">(+2T: 1)</span>       |
+            <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>     |
+   Estrofa: <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>     | (x2)
+            <span class="bat-1">(R1: 3)</span><span class="bat-8">(+2T: 1)</span>       |
+Estribillo: <span class="bat-3">(E1: 3)</span><span class="bat-4">(E1-t: 1)</span>(x2)  |
+            <span class="bat-3">(E1: 1)</span><span class="bat-5">(E1-t2: 1)</span>     |
 
-Intro: <span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
-Estrofa 1: <span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
-Estrofa 2: <span class="bat-3">(E1: 3)</span><span class="bat-4">(E1-t: 1)</span>(x2)
+     Intro: <span class="bat-1">(R1: 3)</span><span class="bat-8">(+2T: 1)</span>
+            <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>
+   Estrofa: <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>
+            <span class="bat-1">(R1: 3)</span><span class="bat-8">(+2T: 1)</span>
+Estribillo: <span class="bat-3">(E1: 3)</span><span class="bat-4">(E1-t: 1)</span>(x2)
 
-Estrofa 3: <span class="bat-1">(R1: 8)</span>
+    Puente: <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>
+            <span class="bat-1">(R1: 4)</span>
+     Break: <span class="bat-6">(Br1: 1)</span><span class="bat-7">(Br2: 1)</span>
 
-Puente: <span class="bat-6">(Br1: 1)</span><span class="bat-7">(Br2: 1)</span>
+      Solo: <span class="bat-1">(R1: 3)</span><span class="bat-2">(+2T: 1)</span>(x2)
 
-Solo: <span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
-
-Final: <span class="bat-10">(Platos)</span>
+     Final: <span class="bat-10">(Platos)</span>
 
 <hr>
 
-<span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
+<span class="bat-1">(R1: 3)</span><span class="bat-8">(+2T: 1)</span> + <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>
 Intro
 <span class="bat-1">
 (R1: 3)
 Hoy he vuelto a hablar con él,
-             <span class="bat-2">(R1-t: 1)</span>
+             <span class="bat-2">(+T(4): 1)</span>
 no es un día <span class="bat-2">más.</span>
 (R1: 3)
 En su templo, en su taller,
-            <span class="bat-2">(R1-t: 1)</span>
-puedes encon<span class="bat-2">trar</span></span><span class="bat-3">
+            <span class="bat-8">(+2T: 1)</span>
+puedes encon<span class="bat-8">trar</span></span><span class="bat-3">
 (E1: 3)
 recuerdos e imágenes,
             <span class="bat-4">(E1-t: 1)</span>
@@ -96,17 +120,17 @@ un alma inmor<span class="bat-4">tal,</span>
 (E1: 1)      <span class="bat-5">(E1-t2: 1)</span>
 su alma inmor<span class="bat-5">tal.</span></span>
 
-<span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
+<span class="bat-1">(R1: 3)</span><span class="bat-8">(+2T: 1)</span> + <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>
 Intro
 
 <span class="bat-1">(R1: 3)
 Hoy he visto algo nacer
-             <span class="bat-2">(R1-t: 1)</span>
+             <span class="bat-2">(+T(4): 1)</span>
 desde el cora<span class="bat-2">zón,</span>
 (R1: 3)
 sobre un trozo de papel:
-          <span class="bat-2">(R1-t: 1)</span>
-es una can<span class="bat-2">ción.</span></span><span class="bat-3">
+          <span class="bat-8">(+2T: 1)</span>
+es una can<span class="bat-8">ción.</span></span><span class="bat-3">
 (E1: 3)
 Sus letras compartirán
             <span class="bat-4">(E1-t: 1)</span>
@@ -118,17 +142,17 @@ de un alma inmor<span class="bat-4">tal,</span>
 (E1: 1)      <span class="bat-5">(E1-t2: 1)</span>
 su alma inmor<span class="bat-5">tal.</span></span>
 
-<span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
+<span class="bat-1">(R1: 3)</span><span class="bat-8">(+2T: 1)</span> + <span class="bat-1">(R1: 3)</span><span class="bat-2">(+T(4): 1)</span>
 Intro
 
 <span class="bat-1">(R1: 3)
 Se empeña en amanecer,
-             <span class="bat-2">(R1-t: 1)</span>
+          <span class="bat-2">(+T(4): 1)</span>
 es un día <span class="bat-2">más.</span>
 (R1: 3)
 Aprende a vivir sin él
-               <span class="bat-2">(R1-t: 1)</span>
-y a volver a an<span class="bat-2">dar.</span></span><span class="bat-3">
+               <span class="bat-8">(+2T: 1)</span>
+y a volver a an<span class="bat-8">dar.</span></span><span class="bat-3">
 (E1: 3)
 Sus ojos solían ver
             <span class="bat-4">(E1-t: 1)</span>
@@ -138,15 +162,15 @@ y el brillo tras el cristal
                 <span class="bat-4">(E1-t: 1)</span>
 de un alma inmor<span class="bat-4">tal.</span></span>
 
-<span class="bat-1">
-(R1: 8)
-No sé muy bien qué hago aquí. Tal vez ya no estás. 
-Gracias por dejarme ver a un hombre esencial.
-</span>
+<span class="bat-1">(R1: 3)</span>                               <span class="bat-2">(+T(4): 1)</span>
+<span class="bat-1">No sé muy bien qué hago aquí. Tal vez</span> <span class="bat-2">ya no estás.</span>
+<span class="bat-1">(R1: 4)</span>
+<span class="bat-1">Gracias por dejarme ver a un hombre esencial.</span>
+
 <span class="bat-6">(Br1: 1)</span><span class="bat-7">(Br2: 1)</span>
 Puente
 
-<span class="bat-1">(R1: 3)</span><span class="bat-2">(R1-t: 1)</span>(x2)
+<span class="bat-1">(R1: 3)</span><span class="bat-2">(+2T: 1)</span>(x2)
 Solo
 
 <span class="bat-10">(Platos)</span>

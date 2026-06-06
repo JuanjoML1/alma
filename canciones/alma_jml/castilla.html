@@ -28,42 +28,54 @@
                 <input
                     type="range"
                     id="zoom-slider"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
                 <input
                     type="number"
                     id="zoom-number"
-                    min="0.5"
-                    max="1.5"
+                    min="0.2"
+                    max="1.0"
                     step="0.05"
                     value="1">
             </label>
         </div>
-        <div class="ritmos-cortos">
-            <img class="ritmo bat-3" src="../bat/hilo_r1.svg">
-            <img class="ritmo bat-4" src="../bat/hilo_r2.svg">
-            <img class="ritmo bat-5" src="../bat/castilla_br1.svg">
-            <img class="ritmo bat-6" src="../bat/castilla_br2.svg">
-            <img class="ritmo bat-2" src="../bat/castilla_k.svg">
+        <div class="ritmos ritmos--cortos">
+            <div class="ritmo-item bat-3">
+                <span class="nombre-ritmo">R1</span><img class="ritmo-img" src="../bat/hilo_r1.svg">
+            </div>
+            <div class="ritmo-item bat-4">
+                <span class="nombre-ritmo">R2</span><img class="ritmo-img" src="../bat/hilo_r2.svg">
+            </div>
+            <div class="ritmo-item bat-5">
+                <span class="nombre-ritmo">Br1</span><img class="ritmo-img" src="../bat/castilla_br1.svg">
+            </div>
+            <div class="ritmo-item bat-6">
+                <span class="nombre-ritmo">Br2</span><img class="ritmo-img" src="../bat/castilla_br2.svg">
+            </div>
+            <div class="ritmo-item bat-2">
+                <span class="nombre-ritmo">K</span><img class="ritmo-img" src="../bat/castilla_k.svg">
+            </div>
         </div>
-        <div class="ritmos-largos">
-            <img class="ritmo bat-1" src="../bat/castilla_intro1.svg">
+        <div class="ritmos ritmos--largos">
+            <div class="ritmo-item bat-1">
+                <span class="nombre-ritmo">Intro</span><img class="ritmo-img" src="../bat/castilla_intro1.svg">
+            </div>
         </div>
 
         <pre>
-Intro 1: <span class="bat-1">(Intro1: 4+4 + 4+2)</span>
-Intro 2: <span class="bat-1">(Intro1: 4+4 + 4+1)</span><span class="bat-2">(K: 1)</span>
+     Intro 1: <span class="bat-1">(Intro1: 4+4 + 4+2)</span>
+     Intro 2: <span class="bat-1">(Intro1: 4+4 + 4+1)</span><span class="bat-2">(K: 1)</span>
 
-Castilla 1: <span class="bat-2">(K: 4+4)</span><span class="bat-3">(R1: 4+4)</span>
+  Castilla 1: <span class="bat-2">(K: 4+4)</span><span class="bat-3">(R1: 4+4)</span>
 
 Castilla 2.1: <span class="bat-4">(R2: 4+4)</span><span class="bat-3">(R1: 4+4)</span>
 Castilla 2.2: <span class="bat-4">(R2: 4+4)</span><span class="bat-3">(R1: 4+3)</span><span class="bat-6">(Br2: 1)</span>
 
-Castilla 3: <span class="bat-10">(Silencio: 4)</span><span class="bat-4">(R2: 4)</span><span class="bat-3">(R1: 4+4)</span>
+  Castilla 3: <span class="bat-10">(Silencio: 4)</span><span class="bat-4">(R2: 4)</span><span class="bat-3">(R1: 4+4)</span>
 
-Break: <span class="bat-4">(R2: 1)</span><span class="bat-5">(Br1: 1)</span>
+       Break: <span class="bat-4">(R2: 1)</span><span class="bat-5">(Br1: 1)</span>
 
 Castilla 4.1: <span class="bat-3">(R1: 4+4 + 4+4)</span>
 Castilla 4.2: <span class="bat-3">(R1: 4+4 + 4+4)</span>
