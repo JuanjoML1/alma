@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Vuelve a danzar</title>
+        <link rel="stylesheet" href="../../css/colores.css">
+        <link rel="stylesheet" href="../../css/estilo.css">
+        <link rel="stylesheet" href="../../css/estilo-texto.css">
+        <link rel="stylesheet" href="../../css/estilo-bat.css">
+    </head>
+
+    <body>
+        <div class="cancion-header">
+            <h1 class="titulo">Vuelve a danzar</h1>
+            <div class="tono">
+                <span>146 bpm</span>
+            </div>
+        </div>
+        <div id="main-controls">
+            <button id="back-button" onclick="window.location.href='../../index.html'">← Volver</button>
+            <div id="controls-container">
+                <button id="back-button" onclick="window.location.href='../alma/vuelve_a_danzar.html'">Volver</button>
+            </div>
+        </div>
+        <div class="control-zoom">
+            <label>Zoom:
+                <input
+                    type="range"
+                    id="zoom-slider"
+                    min="0.2"
+                    max="1.0"
+                    step="0.05"
+                    value="1">
+                <input
+                    type="number"
+                    id="zoom-number"
+                    min="0.2"
+                    max="1.0"
+                    step="0.05"
+                    value="1">
+            </label>
+        </div>
+        <div class="ritmos ritmos--cortos">
+            <div class="ritmo-item bat-1">
+                <span class="nombre-ritmo">R1</span><img class="ritmo-img" src="../bat/jym_r1.svg">
+            </div>
+            <div class="ritmo-item bat-4">
+                <span class="nombre-ritmo">R1+r</span><img class="ritmo-img" src="../bat/jym_r1r.svg">
+            </div>
+            <div class="ritmo-item bat-2">
+                <span class="nombre-ritmo">R2</span><img class="ritmo-img" src="../bat/hastasiempre_r1.svg">
+            </div>
+            <div class="ritmo-item bat-5">
+                <span class="nombre-ritmo">R2+r</span><img class="ritmo-img" src="../bat/hastasiempre_r1r.svg">
+            </div>
+            <div class="ritmo-item bat-3">
+                <span class="nombre-ritmo">Toms</span><img class="ritmo-img" src="../bat/jimena_toms.svg">
+            </div>
+            <div class="ritmo-item bat-6">
+                <span class="nombre-ritmo">R3</span><img class="ritmo-img" src="../bat/hilo_r2.svg">
+            </div>
+        </div>
+        <pre>
+    Intro: 
+
+Estrofa 1: <span class="bat-1">(R1: 8)</span><span class="bat-2">(R2: 3)</span><span class="bat-3">(Toms: 1)</span> | (x2)
+Estrofa 1: <span class="bat-1">(R1: 8)</span>
+
+   Puente: <span class="bat-2">(R2: 4)</span>
+
+Estrofa 2: <span class="bat-5">(R2+r: 8)</span><span class="bat-6">(R3: 4)</span>
+Estrofa 1: <span class="bat-4">(R1+r: 8 + 8)</span>
+
+     Solo: 
+
+Estrofa 1: <span class="bat-4">(R1+r: 8 + 8)</span>
+
+    Final: 
+            <hr>
+<span class="bat-1">(R1: 8)
+Si ganara Padilla
+la corrupción no tendría silla.
+Si también Maldonado
+Algún sentido tendría el senado.</span>
+<span class="bat-2">(R2: 3)</span>                 <span class="bat-3">(Toms: 1)</span>
+<span class="bat-2">Juan, Juan, vuelve a dan</span><span class="bat-3">zar.</span>
+
+<span class="bat-1">(R1: 8)
+Ven, Juan de Zapata,
+en 3x4 danza mi gata,
+camelando al comunero
+sin arrastrar nada por el suelo.</span>
+<span class="bat-2">(R2: 3)</span>                 <span class="bat-3">(Toms: 1)</span>
+<span class="bat-2">Juan, Juan, vuelve a dan</span><span class="bat-3">zar, y María.</span>
+
+<span class="bat-1">(R1: 8)
+Ay, María Pacheco.
+Eterna musa de hombres sinceros
+Hazaña propia, exilio infame.
+Tajo vivo aún en Toledo.</span>
+
+<span class="bat-2">(R2: 4)</span>
+Puente
+
+<span class="bat-5">(R2+r: 8)
+Si triunfa Juan Bravo
+Mayor nobleza mejor hidalgo
+Desde Atienza a Berlanga 
+Cabalgaría Sancho Panza.</span>
+<span class="bat-6">(R3: 4)
+Y Quijano y Dulcinea...</span>
+
+<span class="bat-4">(R1+r: 8 + 8)
+España entera en celtiberia
+Su capital mirando al mar
+sin más engaños ni postureos
+ni trajes nuevos de indentidad
+
+que siempre venden lo que no tienen
+y ahogan a un pueblo y su verdad
+Aún Castilla se siente entera,
+siempre libre y comunera.
+</span>
+<span class="solo">(R1+r: 8 + 8)
+Fa#(sus4), Sol#(sus4), Fa#(sus4), Mi,  SI..(bateria)
+Solo Dulzainas Guitarra.
+</span>
+<span class="bat-4">(R1+r: 8)
+Por qué condenan sin juzgar
+Maldita prensa ni puedo hablar
+No esperes juntas ni un capitán
+Pero no calles y empieza a andar.</span>
+<span class="puente">
+Juan-Juan, vuelve a danzar.
+</span>
+</pre>
+
+    </body>
+    <script src="../../js/transponer.js"></script>
+    <script src="../../js/cambiar_tema.js"></script>
+    <script src="../../js/zoom.js"></script>
+
+</html>
