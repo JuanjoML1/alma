@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>ALMA (JML)</title>
+        <link rel="stylesheet" href="css/colores.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/estilo-texto.css">
+    </head>
+
+    <body>
+        <div id="barra-fija">
+            <h1>ALMA (JML)</h1>
+
+            <div id="buscador-container">
+                <select id="filtro">
+                    <option value="titulo" selected>Título</option>
+                    <option value="autor">Autor</option>
+                    <option value="album">Álbum</option>
+                    <option value="todos">Todos</option>
+                </select>
+                <input type="text" id="buscador" placeholder="Buscar canción...">
+            </div>
+            <ul class="lista">
+                <li><a href="index.html">ALMA</a></li>
+            </ul>
+        </div>
+
+        <button id="btn-menu">☰</button>
+        <div id="secciones-lateral">
+            <a href="#alma" class="btn-indice">ALMA</a>
+            <a href="#vers" class="btn-indice">Versiones</a>
+            <a href="#bat" class="btn-indice">JML</a>
+        </div>
+
+        <button id="btn-theme">🌙</button>
+
+        <h2 id="alma">Canciones</h2>
+        <ul class="lista">
+            <li><a href="canciones/alma_jml/a_donde_lo_huido.html">A dónde lo huido</a></li>
+            <li><a href="canciones/alma_jml/cantiga.html">Cantiga</a></li>
+            <li><a href="canciones/alma_jml/castilla.html">Castilla</a></li>
+            <li><a href="canciones/alma_jml/edicto_xxi.html">Edicto XXI</a></li>
+            <li><a href="canciones/alma_jml/hilo_de_ariadna.html">El hilo de Ariadna</a></li>
+            <li><a href="canciones/alma_jml/hasta_siempre.html">Hasta siempre</a></li>
+            <li><a href="canciones/alma_jml/jimena.html">Jimena</a></li>
+            <li><a href="canciones/alma_jml/lagarto_lagarto.html">Lagarto, lagarto</a></li>
+            <li><a href="canciones/alma_jml/melon_de_agua.html">Melón de agua</a></li>
+            <li><a href="canciones/alma_jml/mi_refugio.html">Mi refugio</a></li>
+            <li><a href="canciones/alma_jml/siempre_por_ti.html">Siempre por ti</a></li>
+            <li><a href="canciones/alma_jml/sin_ti.html">Sin ti</a></li>
+            <li><a href="canciones/alma_jml/tabernarios.html">Tabernarios</a></li>
+            <li><a href="canciones/alma_jml/tragaluz.html">Tragaluz</a></li>
+            <li><a href="canciones/alma_jml/tu_navidad.html">Tu Navidad</a></li>
+            <li><a href="canciones/alma_jml/vuela.html">Vuela</a></li>
+            <li><a href="canciones/alma_jml/vuelve_a_danzar.html">Vuelve a danzar</a></li>
+        </ul>
+
+        <h2 id="vers">Versiones</h2>
+        <ul class="lista">
+            <li><a href="canciones/versiones_jml/baila_morena.html">Baila, morena</a></li>
+            <li><a href="canciones/versiones_jml/handle_with_care.html">Handle with care</a></li>
+            <li><a href="canciones/versiones_jml/lady_madrid.html">Lady Madrid</a></li>
+            <li><a href="canciones/versiones_jml/marta_sebas_guille_y_los_demas.html">Marta, Sebas, Guille y los demás</a></li>
+            <li><a href="canciones/versiones_jml/mr_tambourine_man.html">Mr. Tambourine man</a></li>
+            <li><a href="canciones/versiones_jml/retales_de_una_vida.html">Retales de una vida</a></li>
+            <li><a href="canciones/versiones_jml/un_velero_llamado_libertad.html">Un velero llamado libertad</a></li>
+        </ul>
+
+        <h2 id="bat">JML</h2>
+        <ul class="lista">
+            <li><a href="canciones/bateria_jml/baila_morena.html">Again</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">Anybody seen my baby</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">APT</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">Come as you are</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">Entre dos tierras</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">Gravity</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">Highway to hell</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">I want to break free</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">The show must go on</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">Vultures</a></li>
+            <li><a href="canciones/bateria_jml/baila_morena.html">You know I'm no good</a></li>
+        </ul>
+
+        <h2 style="display:none"></h2>
+
+        <script src="js/buscador.js"></script>
+        <script src="js/barra_lateral.js"></script>
+        <script src="js/cambiar_tema.js"></script>
+        <script src="js/mostrar.js"></script>
+    </body>
+</html>
