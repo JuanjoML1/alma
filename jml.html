@@ -3,7 +3,8 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>ALMA (JML)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ALMA ARA (JML)</title>
         <link rel="stylesheet" href="css/colores.css">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="css/estilo-texto.css">
@@ -11,7 +12,7 @@
 
     <body>
         <div id="barra-fija">
-            <h1>ALMA (JML)</h1>
+            <h1>ALMA ARA (JML)</h1>
 
             <div id="buscador-container">
                 <select id="filtro">
@@ -22,11 +23,15 @@
                 </select>
                 <input type="text" id="buscador" placeholder="Buscar canción...">
             </div>
+            <ul class="lista">
+                <li><a href="index.html">ALMA</a></li>
+            </ul>
         </div>
 
         <button id="btn-menu">☰</button>
         <div id="secciones-lateral">
-            <a href="#alma" class="btn-indice">ALMA</a>
+            <a href="#list" class="btn-indice">Playlist</a>
+            <a href="#alma" class="btn-indice">ALMA ARA</a>
             <a href="#vers" class="btn-indice">Versiones</a>
             <a href="#bat" class="btn-indice">JML </a>
         </div>
@@ -34,7 +39,7 @@
         <button id="btn-theme">🌙</button>
 
         <h2 id="list">Playlist</h2>
-        <ul class="lista">
+        <ul class="lista lista_jml">
             <li><a href="canciones/alma_jml/melon_de_agua.html">Melón de agua</a></li>
             <li><a href="canciones/alma_jml/hasta_siempre.html">Hasta siempre</a></li>
             <li><a href="canciones/alma_jml/hilo_de_ariadna.html">El hilo de Ariadna</a></li>
@@ -42,12 +47,20 @@
             <li><a href="canciones/alma_jml/jimena.html">Jimena</a></li>
             <li><a href="canciones/alma_jml/vuelve_a_danzar.html">Vuelve a danzar</a></li>
             <li><a href="canciones/alma_jml/a_donde_lo_huido.html">A dónde lo huido</a></li>
+        </ul>
+        <ul class="lista">
             <li><a></a></li>
+        </ul>
+        <ul class="lista lista_jml">
             <li><a href="canciones/versiones_jml/mr_tambourine_man.html">Mr. Tambourine man</a></li>
             <li><a href="canciones/versiones_jml/lady_madrid.html">Lady Madrid</a></li>
             <li><a href="canciones/versiones_jml/handle_with_care.html">Handle with care</a></li>
             <li><a href="canciones/versiones_jml/marta_sebas_guille_y_los_demas.html">Marta, Sebas, Guille y los demás</a></li>
+        </ul>
+        <ul class="lista">
             <li><a></a></li>
+        </ul>
+        <ul class="lista lista_jml">
             <li><a href="canciones/alma_jml/castilla.html">Castilla</a></li>
             <li><a href="canciones/alma_jml/cantiga.html">Cantiga</a></li>
             <li><a href="canciones/alma_jml/edicto_xxi.html">Edicto XXI</a></li>

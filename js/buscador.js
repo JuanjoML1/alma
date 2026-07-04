@@ -15,7 +15,7 @@ function normalizar(texto) {
 
 function filtrar() {
     const texto = normalizar(buscador.value);
-    const tipo = filtro.value;
+    const tipo = filtro ? filtro.value : "todos";
 
     items.forEach(li => {
         const titulo = normalizar(li.querySelector("a").textContent);
