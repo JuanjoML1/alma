@@ -79,10 +79,16 @@ pre .ag {
     text-decoration: overline;
 }
 
-pre.original {
-    /*Los pre que son original. Con punto es "los original que estén dentro de un pre"*/
+pre .letra {
     font-style: italic;
-    color: var(--texto);
+    color: var(--letra);
+}
+
+.bateria-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-items: center;
 }
 
 .cancion-header .numeros {
