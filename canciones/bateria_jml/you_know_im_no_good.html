@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>You know I'm no good</title>
+        <link rel="stylesheet" href="../../css/colores.css">
+        <link rel="stylesheet" href="../../css/estilo.css">
+        <link rel="stylesheet" href="../../css/estilo-texto.css">
+        <link rel="stylesheet" href="../../css/estilo-bat.css">
+    </head>
+
+    <body>
+        <div class="cancion-header">
+            <h1 class="titulo">You know I'm no good</h1>
+            <div class="tono">
+                <span>103 bpm</span>
+            </div>
+        </div>
+        <div id="main-controls">
+            <button id="back-button" onclick="window.location.href='../../jml.html'">← Volver</button>
+            <div id="controls-container">
+                <button id="back-button" onclick="window.location.href='../alma/hasta_siempre.html'">Volver</button>
+            </div>
+        </div>
+
+        <div class="bateria-grid">
+            <pre class="bateria-estructura">
+     Intro: <span class="bat-1">(R1: 2)</span>
+            <span class="bat-1">(R1: 3)</span><span class="bat-2">(R2: 1)</span>
+
+   Estrofa: <span class="bat-1">(R1: 4+4)</span>(Doble caja en 2-3y)
+            <span class="bat-1">(R1: 4)</span>
+
+Estribillo: <span class="bat-3">(B: 3)</span><span class="bat-4">(Br1: 1)</span>
+
+   Estrofa: <span class="bat-2">(R2: 4+4)</span>
+            <span class="bat-2">(R2: 4)</span>
+   Estrofa: <span class="bat-1">(R1: 4+4)</span>
+            <span class="bat-1">(R1: 4)</span>
+
+Estribillo: <span class="bat-3">(B: 3)</span><span class="bat-5">(Br2: 1)</span>
+
+   Estrofa: <span class="bat-2">(R2: 4+4)</span>
+   Estrofa: <span class="bat-2">(R2: 4+4)</span>
+   Estrofa: <span class="bat-10">(Sil: 4)</span><span class="bat-1">(R1: 4)</span>
+            <span class="bat-1">(R1: 4)</span>
+
+Estribillo: <span class="bat-3">(B: 3)</span><span class="bat-5">(Br2: 1)</span>
+
+   Estrofa: <span class="bat-2">(R2: 4+4)</span>
+            <span class="bat-2">(R2: 4+4)</span>
+        </pre>
+            <pre class="bateria-notas">
+(Batería)
+(Bajo)
+
+<span class="letra">Meet you downstairs</span>
+<span class="letra">Cause you're my fellow</span>
+
+<span class="letra">By the time</span>
+
+<span class="letra">I cheated myself</span>
+(Silencio)
+<span class="letra">Upstairs in bed</span>
+<span class="letra">Run out to meet</span>
+
+<span class="letra">There'll be none of him</span>
+
+<span class="letra">I cheated myself</span>
+(Trompetas)
+<span class="letra">Sweet reunion, Jamaica and Spain</span>
+<span class="letra">Then you notice</span>
+
+<span class="letra">You shrug, and it's the worst</span>
+
+<span class="letra">I cheated myself</span>
+<span class="letra">I cheated myself</span>
+            </pre>
+        </div>
+        <div class="ritmos ritmos--cortos">
+            <div class="ritmo-item bat-3">
+                <span class="nombre-ritmo">B</span><img class="ritmo-img" src="../bat/winehouse_billo.svg">
+            </div>
+            <div class="ritmo-item bat-4">
+                <span class="nombre-ritmo">Br1</span><img class="ritmo-img" src="../bat/winehouse_br1.svg">
+            </div>
+            <div class="ritmo-item bat-5">
+                <span class="nombre-ritmo">Br2</span><img class="ritmo-img" src="../bat/winehouse_br2.svg">
+            </div>
+        </div>
+        <div class="ritmos ritmos--largos">
+            <div class="ritmo-item bat-1">
+                <span class="nombre-ritmo">R1</span><img class="ritmo-img" src="../bat/winehouse_r1.svg">
+            </div>
+            <div class="ritmo-item bat-2">
+                <span class="nombre-ritmo">R2</span><img class="ritmo-img" src="../bat/winehouse_r2.svg">
+            </div>
+        </div>
+        <div class="control-zoom">
+            <label>Zoom:
+                <input
+                    type="range"
+                    id="zoom-slider"
+                    min="0.2"
+                    max="1.0"
+                    step="0.05"
+                    value="1">
+                <input
+                    type="number"
+                    id="zoom-number"
+                    min="0.2"
+                    max="1.0"
+                    step="0.05"
+                    value="1">
+            </label>
+        </div>
+    </body>
+    <script src="../../js/transponer.js"></script>
+    <script src="../../js/cambiar_tema.js"></script>
+    <script src="../../js/zoom.js"></script>
+
+</html>

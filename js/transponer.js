@@ -27,20 +27,20 @@ const NOTE_INDEX = {
 
 /* Regex acorde */
 const CHORD_REGEX =
-    /\b(Do#|Re#|Fa#|Sol#|La#|Reb|Mib|Solb|Lab|Sib|Do|Re|Mi|Fa|Sol|La|Si|C#|D#|F#|G#|A#|Db|Eb|Gb|Ab|Bb|C|D|E|F|G|A|B)(m|maj7|7|sus4|sus2|º7|º|\+|m7b5)?\b/g;
+    /(Do#|Re#|Fa#|Sol#|La#|Reb|Mib|Solb|Lab|Sib|Do|Re|Mi|Fa|Sol|La|Si|C#|D#|F#|G#|A#|Db|Eb|Gb|Ab|Bb|C|D|E|F|G|A|B)(m|maj7|7|sus4|sus2|º7|º|\+|m7b5)?/g;
 
 /* Guardar originales */
 const PRE_ORIGINALS = [];
 document.querySelectorAll("pre").forEach(pre => PRE_ORIGINALS.push(pre.innerHTML));
 
-let currentCifrado = "english";
+let currentCifrado = "latin";
 let currentSemitones = 0;
 
 /* Detecta si una línea es SOLO acordes */
 function isChordLine(line) {
     const stripped = line
         .replace(CHORD_REGEX, "")
-        .replace(/[()\[\]-]/g, "")
+        .replace(/[()\[\]]/g, "")
         .replace(/\s+/g, "");
     return stripped.length === 0;
 }
@@ -111,7 +111,7 @@ function toggleCifrado() {
 /* Reset */
 function resetTono() {
     currentSemitones = 0;
-    currentCifrado = "english";
+    currentCifrado = "latin";
     document.querySelectorAll("pre").forEach((pre, i) => {
         pre.innerHTML = PRE_ORIGINALS[i];
     });
@@ -120,3 +120,89 @@ function resetTono() {
 /* API */
 function subirTono() { transposeAll(1); }
 function bajarTono() { transposeAll(-1); }
+
+/* =========================================================
+   AJUSTAR TAMAÑO DE LETRA
+   ========================================================= */
+function ajustarTamanoCancion(pre) {
+    const ancho = pre.clientWidth;
+    const tamañoBase = 16;
+    const tamañoMinimo = 8;
+    const tamañoMaximo = 36;
+
+    if (ancho <= 0) return;
+    // Buscar la línea más larga
+    const lineas = pre.textContent.split("\n");
+
+    let maxCaracteres = 0;
+
+    lineas.forEach(linea => {
+        maxCaracteres = Math.max(maxCaracteres, linea.length);
+    });
+
+    if (maxCaracteres === 0) return;
+
+    // Medir usando SIEMPRE el tamaño base
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const estilo = getComputedStyle(pre);
+
+    ctx.font = `${tamañoBase}px ${estilo.fontFamily}`;
+
+    const anchoCaracter = ctx.measureText("M").width;
+
+    const anchoLinea = maxCaracteres * anchoCaracter;
+
+    // Calcular nuevo tamaño
+    let nuevoTamaño =
+        tamañoBase * (ancho / anchoLinea);
+
+    // Aplicar límites
+    nuevoTamaño = Math.max(
+        tamañoMinimo,
+        Math.min(tamañoMaximo, nuevoTamaño)
+    );
+    pre.style.fontSize = nuevoTamaño + "px";
+}
+
+/* =========================================================
+   INICIALIZACIÓN
+   ========================================================= */
+function ajustarTodasLasCanciones() {
+    const canciones = document.querySelectorAll("pre");
+
+    canciones.forEach(pre => {
+        ajustarTamanoCancion(pre);
+    });
+}
+
+/* =========================================================
+   CARGA INICIAL
+   ========================================================= */
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+        ajustarTodasLasCanciones();
+    });
+} else {
+    ajustarTodasLasCanciones();
+}
+
+/* =========================================================
+   OBSERVAR CAMBIOS REALES DE TAMAÑO
+   ========================================================= */
+const observer = new ResizeObserver(entries => {
+    entries.forEach(entry => {
+        const pre = entry.target;
+        // Evitar recalcular mientras el navegador
+        // todavía está haciendo cambios de layout
+        clearTimeout(pre._ajusteTimeout);
+        pre._ajusteTimeout = setTimeout(() => {
+            ajustarTamanoCancion(pre);
+        }, 100);
+    });
+});
+
+document.querySelectorAll("pre").forEach(pre => {
+    observer.observe(pre);
+});
